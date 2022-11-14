@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,6 +18,7 @@ class GameFactory extends Factory
     public function definition()
     {
         return [
+            'user_id' => User::factory(),
             'name' => fake()->text(255),
             'publisher' => fake()->text(255),
             'nickname' => fake()->text(255),

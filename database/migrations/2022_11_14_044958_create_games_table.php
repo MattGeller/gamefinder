@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('nickname')->nullable();
             $table->boolean('favorite');
             $table->timestamps();
+
+            $table->unique(['user_id', 'name', 'publisher']);
         });
     }
 
